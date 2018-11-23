@@ -13,3 +13,34 @@ class OktaAPIClient(object):
             timeout=10,
             json_encode_body=True,
         )
+
+
+# FIXME: determine how to dynamically get default actions from
+#   simple_rest_client
+def get_default_actions(resource):
+    return {
+      'create': {
+        'method': 'POST',
+        'url': resource
+      },
+      'destroy': {
+        'method': 'DELETE',
+        'url': '%s/{}' % resource
+      },
+      'list': {
+        'method': 'GET',
+        'url': resource
+      },
+      'partial_update': {
+        'method': 'PATCH',
+        'url': '%s/{}' % resource
+      },
+      'retrieve': {
+        'method': 'GET',
+        'url': '%s/{}' % resource
+      },
+      'update': {
+        'method': 'PUT',
+        'url': '%s/{}' % resource
+      }
+    }
