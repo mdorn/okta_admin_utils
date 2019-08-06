@@ -2,7 +2,7 @@ import logging
 
 import click
 
-from ..api import OktaAPIClient
+from okta_admin_utils.api import OktaAPIClient
 
 
 class Client(OktaAPIClient):

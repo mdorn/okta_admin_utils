@@ -4,7 +4,7 @@ import re
 import click
 from simple_rest_client.resource import Resource
 
-from ..api import OktaAPIClient, get_default_actions
+from okta_admin_utils.api import OktaAPIClient, get_default_actions
 
 
 class AppResource(Resource):

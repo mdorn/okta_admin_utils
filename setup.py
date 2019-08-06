@@ -36,7 +36,7 @@ setup(
     description="Command line utility for managing common Okta administrator tasks.",
     entry_points={
         'console_scripts': [
-            'okta_admin_utils=okta_admin_utils.cli:main',
+            'okta-admin=okta_admin_utils.cli:main',
         ],
     },
     install_requires=requirements,

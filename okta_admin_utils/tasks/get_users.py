@@ -1,8 +1,8 @@
 import logging
 
 import click
-from ..logs import format_json_output
-from ..api import OktaAPIClient
+from okta_admin_utils.logs import format_json_output
+from okta_admin_utils.api import OktaAPIClient
 
 
 class Client(OktaAPIClient):
@@ -13,4 +13,4 @@ class Client(OktaAPIClient):
     def run(self):
         limit = click.prompt('How many users?', type=int)
         response = self.api.users.list(params={'limit': limit})
-        logging.debug(format_json_output(response.body))
+        logging.info(format_json_output(response.body))

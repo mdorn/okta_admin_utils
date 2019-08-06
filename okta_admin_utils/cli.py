@@ -5,9 +5,12 @@ import os
 import sys
 
 import click
+from dotenv import load_dotenv
 
 from okta_admin_utils.main import TASK_CONFIG
 
+
+load_dotenv()
 ORG_URL = os.environ.get('OKTA_ORG_URL')
 API_KEY = os.environ.get('OKTA_API_TOKEN')
 

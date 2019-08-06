@@ -2,14 +2,16 @@
 
 """Main module."""
 
-from .tasks import (
+from okta_admin_utils.tasks import (
     create_fake_users,
     delete_deactivated_users,
     get_users,
     deactivate_duplicate_apps,
-    delete_inactive_apps
+    delete_inactive_apps,
+    create_oidc_app
+
 )
-from .logs import configure_logging
+from okta_admin_utils.logs import configure_logging
 configure_logging()
 
 TASK_CONFIG = {
@@ -18,4 +20,5 @@ TASK_CONFIG = {
     'get-users': get_users,
     'deactivate-duplicate-apps': deactivate_duplicate_apps,
     'delete-inactive-apps': delete_inactive_apps,
+    'create-oidc-app': create_oidc_app,
 }

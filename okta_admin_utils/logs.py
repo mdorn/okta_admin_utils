@@ -7,6 +7,9 @@ from pygments import highlight
 from pygments.lexers import JsonLexer
 from pygments.formatters import Terminal256Formatter
 # from pygments.styles import get_style_by_name, get_all_styles
+from dotenv import load_dotenv
+load_dotenv()
+
 
 SILENCE_LOGS = [
     'urllib3.connectionpool',
