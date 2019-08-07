@@ -30,15 +30,13 @@ class AuthzSvrResource(Resource):
 
 
 class Client(OktaAPIClient):
-    def __init__(self, org_url, api_key):
-        super().__init__(org_url, api_key)
+
+    def run(self):
         self.api.add_resource(resource_name='apps')
         self.api.add_resource(
             resource_name='authorizationServers',
             resource_class=AuthzSvrResource
         )
-
-    def run(self):
         app_name = click.prompt(
             'Application name?',
             type=str, default='Okta Test OIDC Client')

@@ -6,11 +6,9 @@ from okta_admin_utils.api import OktaAPIClient
 
 
 class Client(OktaAPIClient):
-    def __init__(self, org_url, api_key):
-        super().__init__(org_url, api_key)
-        self.api.add_resource(resource_name='apps')
 
     def run(self):
+        self.api.add_resource(resource_name='apps')
         # return
         apps_response = self.api.apps.list(params={
             'limit': 200,

@@ -8,8 +8,8 @@ from okta_admin_utils.tasks import (
     get_users,
     deactivate_duplicate_apps,
     delete_inactive_apps,
-    create_oidc_app
-
+    create_oidc_app,
+    create_group,
 )
 from okta_admin_utils.logs import configure_logging
 configure_logging()
@@ -21,4 +21,5 @@ TASK_CONFIG = {
     'deactivate-duplicate-apps': deactivate_duplicate_apps,
     'delete-inactive-apps': delete_inactive_apps,
     'create-oidc-app': create_oidc_app,
+    'create-group': create_group,
 }

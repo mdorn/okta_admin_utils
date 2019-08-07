@@ -15,11 +15,9 @@ class AppResource(Resource):
 
 
 class Client(OktaAPIClient):
-    def __init__(self, org_url, api_key):
-        super().__init__(org_url, api_key)
-        self.api.add_resource(resource_name='apps', resource_class=AppResource)
 
     def run(self):
+        self.api.add_resource(resource_name='apps', resource_class=AppResource)
         # return
         apps_response = self.api.apps.list(params={
             'limit': 200,

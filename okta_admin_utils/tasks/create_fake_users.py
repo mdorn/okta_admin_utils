@@ -9,11 +9,9 @@ from okta_admin_utils.shared.users import get_fake_user
 
 
 class Client(OktaAPIClient):
-    def __init__(self, org_url, api_key):
-        super().__init__(org_url, api_key)
-        self.api.add_resource(resource_name='users')
 
     def run(self):
+        self.api.add_resource(resource_name='users')
         num_users = click.prompt('How many users?', type=int)
         domain = click.prompt('Domain name?', type=str)
         password = click.prompt('Password?', type=str)
