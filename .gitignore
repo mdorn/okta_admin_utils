@@ -104,3 +104,4 @@ ENV/
 # OTHER
 .DS_Store
 .env.*
+!.env.example
