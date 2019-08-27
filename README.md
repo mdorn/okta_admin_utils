@@ -1,5 +1,17 @@
 The purpose of this library is to provide an easy way to program common tasks in Python against the [Okta REST API](https://developer.okta.com/docs/reference/). For example, in addition to wrapping the API to perform simple tasks like creating a group (`create-group`), you might have a task like `create-fake-users` to create a given number of example users in your Okta tenant.
 
+Currently available tasks:
+
+```
+create-fake-users
+remove-deactivated-users
+get-users
+deactivate-duplicate-apps
+delete-inactive-apps
+create-oidc-app
+create-group
+```
+
 ## Development
 
 For development, first clone the repo and install dependencies into a virtualenv:
