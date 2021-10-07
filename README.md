@@ -4,12 +4,15 @@ Currently available tasks:
 
 ```
 create-fake-users
-remove-deactivated-users
+delete-deactivated-users
 get-users
+deactivate-apps
 deactivate-duplicate-apps
 delete-inactive-apps
 create-oidc-app
 create-group
+create-test-users
+trigger-rate-limit-violation
 ```
 
 ## Development
